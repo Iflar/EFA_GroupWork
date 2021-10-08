@@ -10,6 +10,7 @@ namespace _00_Console
     {
         static void Main(string[] args)
         {
+            //sample text.
         }
     }
 }
