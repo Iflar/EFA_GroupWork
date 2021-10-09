@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _01_ClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,18 @@ namespace _00_Console
 {
     class ProgramUI
     {
+        private readonly HangmanMethodRepository _repo = new HangmanMethodRepository();
+        public void Run()
+        {
+            CreateWord();
+        }
+
+        public void CreateWord()
+        {
+            HangmanObject wordHello = new HangmanObject(letter.H, letter.E, letter.L, letter.L, letter.O);
+            Console.WriteLine(wordHello);
+            Console.ReadKey();
+        }
+
     }
 }

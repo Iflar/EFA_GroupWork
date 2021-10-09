@@ -22,13 +22,5 @@ namespace _01_ClassLibrary
         {
 
         }
-
-
-        //worry about this later
-        //public void ChooseWord()
-        //{
-
-        //}
-
     }
 }
