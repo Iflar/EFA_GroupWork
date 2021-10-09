@@ -39,9 +39,8 @@ namespace _00_Console
             
             Choosing the word at random is easy, we just make a lsit of words, count that list (manually), and generate a random number
             from 1 to the number of items (words) in that list. ex: List<string> exampleList = new List<string>{"one", "two", "three"}
-            generateRandomNumber(1-3); or something... I suppose the hard part will be determining how we want to store the active word
-            or rather, the word that the players will be playing with.
-                                                                                      
+            generateRandomNumber(1-3); or something. However, I'd first like to get the program working with just a single word,
+            Once we've acomplished that, we can spice it up with some randomness.
              */
 
             ProgramUI UI = new ProgramUI();
