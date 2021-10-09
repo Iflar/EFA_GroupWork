@@ -10,6 +10,41 @@ namespace _00_Console
     {
         static void Main(string[] args)
         {
+            /*
+            Notes:
+
+            We are making the game Hangman...
+            Ruels are simple: One player thinks of a word (the computer in this case) while the other players try to guess it.
+            They guess my using a single letter at a time, for each letter guessed wrong, a component of the Hangman is added.
+
+            TODO: 
+
+            1. Computer needs to select a word from a list at random.
+                - Perhaps we could use an enum?      
+                                                                                       1 2 3 4 5          1 2 3 4 5
+            2. Count number of letters in the word - display spaces for letters. ex: ( _ _ _ _ _ ) word = h e l l o
+                - Store each letter in the word in a list as a character? H being index 1, E index 2, and so on...
+
+            3. Each letter guessed correctly needs to be filled in. ex: guess = L ( _ _ l l _ )
+                - This is a bit tricky, I'll think about this one.
+
+            4. Each letter guessed incorectly needs to add to the man. ex: guess = Q  ('_')
+                - Same here as the last one...
+                           
+            Full Hangman: ('_')
+                           /|\
+                           / \
+
+            (Forrest) My ideas before begining:
+            
+            Choosing the word at random is easy, we just make a lsit of words, count that list (manually), and generate a random number
+            from 1 to the number of items (words) in that list. ex: List<string> exampleList = new List<string>{"one", "two", "three"}
+            generateRandomNumber(1-3); or something... I suppose the hard part will be determining how we want to store the active word
+            or rather, the word that the players will be playing with.
+                                                                                      
+             */
+
+            ProgramUI UI = new ProgramUI();
         }
     }
 }
