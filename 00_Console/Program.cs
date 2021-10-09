@@ -15,7 +15,7 @@ namespace _00_Console
 
             We are making the game Hangman...
             Ruels are simple: One player thinks of a word (the computer in this case) while the other players try to guess it.
-            They guess my using a single letter at a time, for each letter guessed wrong, a component of the Hangman is added.
+            They guess using a single letter at a time, for each letter guessed wrong, a component of the Hangman is added.
 
             TODO: 
 
@@ -25,10 +25,10 @@ namespace _00_Console
             2. Count number of letters in the word - display spaces for letters. ex: ( _ _ _ _ _ ) word = h e l l o
                 - Store each letter in the word in a list as a character? H being index 1, E index 2, and so on...
 
-            3. Each letter guessed correctly needs to be filled in. ex: guess = L ( _ _ l l _ )
+            3. Each letter guessed correctly needs to be filled in. ex: guess = L, result: ( _ _ l l _ )
                 - This is a bit tricky, I'll think about this one.
 
-            4. Each letter guessed incorectly needs to add to the man. ex: guess = Q  ('_')
+            4. Each letter guessed incorectly needs to add to the man. ex: guess = Q, result: ('_')
                 - Same here as the last one...
                            
             Full Hangman: ('_')
