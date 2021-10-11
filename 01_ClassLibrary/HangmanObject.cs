@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace _01_ClassLibrary
 {
-    enum letter {
+   public enum letter {
         H = 1,
         E,
         L,
         O}
-    class HangmanObject
+    public class HangmanObject
     {
         public letter LetterOne { get; set; }
         public letter LetterTwo { get; set; }

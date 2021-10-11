@@ -8,19 +8,25 @@ namespace _01_ClassLibrary
 {
     public class HangmanMethodRepository
     {
-        private List<HangmanObject> _wordToGuess = new List<HangmanObject>();
-        public void UpdateHangman()
+        private readonly List<HangmanObject> _wordToGuess = new List<HangmanObject>();
+      public bool AddWord(HangmanObject word)
         {
-
+            int startCount = _wordToGuess.Count;
+            _wordToGuess.Add(word);
+            bool wasAdded = _wordToGuess.Count > startCount ? true : false;
+            return wasAdded;
         }
-        public void GetLetterByNumber()
+
+        public void GuessWord()
         {
-
+            
         }
 
-        public void UpdateCorrectGuess()
+        public void ConvertWordTobool()
         {
-
+           
         }
+
+
     }
 }

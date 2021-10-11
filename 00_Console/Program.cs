@@ -44,6 +44,7 @@ namespace _00_Console
              */
 
             ProgramUI UI = new ProgramUI();
+            UI.Run();
         }
     }
 }

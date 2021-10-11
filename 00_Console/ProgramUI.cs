@@ -10,16 +10,28 @@ namespace _00_Console
     class ProgramUI
     {
         private readonly HangmanMethodRepository _repo = new HangmanMethodRepository();
+       
         public void Run()
         {
             CreateWord();
+            RunGame();
+        }
+        //Console.Clear();
+        private void RunGame()
+        {
+            Console.WriteLine("Welcome, Are you redy to play: Hnagmamn! \n" +
+                "           Press Enter to continue...");
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("It worked!");
+
+            Console.ReadKey();
         }
 
-        public void CreateWord()
+        private void CreateWord()
         {
-            HangmanObject wordHello = new HangmanObject(letter.H, letter.E, letter.L, letter.L, letter.O);
-            Console.WriteLine(wordHello);
-            Console.ReadKey();
+            HangmanObject wordToGuess = new HangmanObject(letter.H, letter.E, letter.L, letter.L, letter.O);
+            _repo.AddWord(wordToGuess);
         }
 
     }
