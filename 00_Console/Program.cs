@@ -34,6 +34,16 @@ namespace _00_Console
             Full Hangman: ('_')
                            /|\
                            / \
+                _________________
+                ||/             |
+                ||
+                ||
+                ||
+                ||
+                ||
+            ____||__________________
+
+
 
             (Forrest) My ideas before begining:
             

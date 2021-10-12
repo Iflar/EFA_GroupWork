@@ -9,7 +9,7 @@ namespace _01_ClassLibrary
     public class HangmanMethodRepository
     {
         private readonly List<HangmanObject> _wordToGuess = new List<HangmanObject>();
-      public bool AddWord(HangmanObject word)
+        public bool AddWord(HangmanObject word)
         {
             int startCount = _wordToGuess.Count;
             _wordToGuess.Add(word);
@@ -19,12 +19,12 @@ namespace _01_ClassLibrary
 
         public void GuessWord()
         {
-            
+
         }
 
         public void ConvertWordTobool()
         {
-           
+
         }
 
         private readonly Random _randomNum = new Random();
@@ -33,17 +33,16 @@ namespace _01_ClassLibrary
         {
             return _randomNum.Next(min, max);
         }
-        private void CreateListOfWords()
+
+        public Array CreateArrayOfWords()
         {
-            List<string> words = new List<string>()
-            {
-                "hello",
-                "cake",
-                "tree"
-            };
+            string[] words = { "hello", "cake", "tree" };
+
+            return words;
         }
 
-        private void WordsToLists()
+
+        public void WordsToLists()
         {
             List<string> helloLetters = new List<string>()
             {
@@ -71,7 +70,9 @@ namespace _01_ClassLibrary
             };
         }
 
-
-
+        private void HangmanConstructor(int numIncorrect)
+        {
+            Console.WriteLine();
+        }
     }
 }
