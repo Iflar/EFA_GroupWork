@@ -27,6 +27,51 @@ namespace _01_ClassLibrary
            
         }
 
+        private readonly Random _randomNum = new Random();
+
+        public int RandomNumber(int min, int max)
+        {
+            return _randomNum.Next(min, max);
+        }
+        private void CreateListOfWords()
+        {
+            List<string> words = new List<string>()
+            {
+                "hello",
+                "cake",
+                "tree"
+            };
+        }
+
+        private void WordsToLists()
+        {
+            List<string> helloLetters = new List<string>()
+            {
+                "h",
+                "e",
+                "l",
+                "l",
+                "o"
+            };
+
+            List<string> cakeLetters = new List<string>()
+            {
+                "c",
+                "a",
+                "k",
+                "e"
+            };
+
+            List<string> treeLetters = new List<string>()
+            {
+                "t",
+                "r",
+                "e",
+                "e"
+            };
+        }
+
+
 
     }
 }

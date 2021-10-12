@@ -10,7 +10,6 @@ namespace _00_Console
     class ProgramUI
     {
         private readonly HangmanMethodRepository _repo = new HangmanMethodRepository();
-       
         public void Run()
         {
             CreateWord();
@@ -30,8 +29,11 @@ namespace _00_Console
 
         private void CreateWord()
         {
-            HangmanObject wordToGuess = new HangmanObject(letter.H, letter.E, letter.L, letter.L, letter.O);
+            int randomNum = _repo.RandomNumber(0, 3);   
+            HangmanObject wordToGuess = new HangmanObject(word.hello);
             _repo.AddWord(wordToGuess);
+            Console.WriteLine(wordToGuess);
+            Console.WriteLine(randomNum);
         }
 
     }

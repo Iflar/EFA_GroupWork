@@ -40,11 +40,13 @@ namespace _00_Console
             Choosing the word at random is easy, we just make a lsit of words, count that list (manually), and generate a random number
             from 1 to the number of items (words) in that list. ex: List<string> exampleList = new List<string>{"one", "two", "three"}
             generateRandomNumber(1-3); or something. However, I'd first like to get the program working with just a single word,
-            Once we've acomplished that, we can spice it up with some randomness.
+            Once we've acomplished that, we can spice it up with some randomness. Make a listy of all the lettrs in our word to guess,
+            take the user input and search the list to see if the letter matches any of the letters in or list
              */
 
             ProgramUI UI = new ProgramUI();
             UI.Run();
+            
         }
     }
 }
