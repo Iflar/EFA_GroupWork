@@ -31,7 +31,7 @@ namespace _00_Console
             4. Each letter guessed incorectly needs to add to the man. ex: guess = Q, result: ('_')
                 - Same here as the last one...
                            
-            Full Hangman: ('_')
+            Full Hangman: (-_-)
                            /|\
                            / \
                 _________________

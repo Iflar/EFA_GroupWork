@@ -32,7 +32,7 @@ namespace _00_Console
             {
                 string guess = _repo.TakeUserGuess();
 
-                _repo.EvauateGuess(wordToGuess, guess);
+                _repo.EvaluateGuess(wordToGuess, guess);
             }
         }
     }

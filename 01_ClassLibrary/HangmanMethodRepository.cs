@@ -54,74 +54,51 @@ namespace _01_ClassLibrary
                 "d"
             };
         }
+
         public int numIncorrect = 0;
-        public void EvauateGuess(string wordToGuess, string guess)
+
+        public int numGuesses = 6;
+        public void EvaluateGuess(string wordToGuess, string guess)
         {
-            switch (wordToGuess)
-            {
-                case "cake":
-                    WordIsCake(wordToGuess);
-                    break;
-
-                case "hello":
-                    WordIsHello(wordToGuess);
-                    break;
-
-                case "abroad":
-                    WordIsAbroad(wordToGuess);
-                    break;
-
-                default: break;
-            }
             if (wordToGuess == guess)
             {
                 Console.Clear();
                 HangmanConstructor(numIncorrect);
 
-                Console.WriteLine("You are correct");
+                Console.WriteLine("cake", "hello", "abroad", "tree", "keys", "dog", "rain", "gravel");
+
+                Console.WriteLine("You are correct -- Game Over! \n" +
+                    "Prerss any key to exit.");
+                Console.ReadKey();
+                Environment.Exit(1);
             }
             else
             {
                 Console.Clear();
                 numIncorrect = ++numIncorrect;
-                HangmanConstructor(numIncorrect);
+                numGuesses = --numGuesses;
 
                 Console.WriteLine("You are wrong");
+                Console.WriteLine($"You have {numGuesses} guesses left.");
             }
-        }
-
-        public void WordIsCake(string wordToGuess)
-        {
-
-        }
-
-        public void WordIsHello(string wordToGuess)
-        {
-
-        }
-
-        public void WordIsAbroad(string wordToGuess)
-        {
-
         }
 
         public string TakeUserGuess()
         {
-            Console.WriteLine("Guess your letter:");
+            HangmanConstructor(numIncorrect);
+            Console.WriteLine("Guess your word:");
+            Console.WriteLine("cake, " + "hello, " + "abroad, " + "tree, " + "keys, " + "dog, " + "rain, " + "gravel");
 
             string guess = Console.ReadLine();
 
             return guess;
         }
-
         public string SelectWord()
         {
-            string[] words = { "cake", "hello", "abroad" };
+            string[] words = { "cake", "hello", "abroad", "tree", "keys", "dog", "rain", "gravel" };
 
             Random random = new Random();
             int value = random.Next(0, words.Length);
-
-            Console.WriteLine(words[value]);
 
             return words[value];
         }
@@ -209,6 +186,11 @@ namespace _01_ClassLibrary
                     "                ||\n" +
                     "                ||\n" +
                     "            ____||________________");
+
+                    Console.WriteLine("You Loose -- game Over! \n" +
+                        "Prerss any key to exit.");
+                    Console.ReadKey();
+                    Environment.Exit(1);
             }
         }
     }
