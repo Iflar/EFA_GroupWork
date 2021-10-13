@@ -8,15 +8,6 @@ namespace _01_ClassLibrary
 {
     public class HangmanMethodRepository
     {
-        private readonly List<HangmanObject> _wordToGuess = new List<HangmanObject>();
-        public bool AddWord(HangmanObject word)
-        {
-            int startCount = _wordToGuess.Count;
-            _wordToGuess.Add(word);
-            bool wasAdded = _wordToGuess.Count > startCount ? true : false;
-            return wasAdded;
-        }
-
         public void GuessWord()
         {
 
@@ -33,14 +24,6 @@ namespace _01_ClassLibrary
         {
             return _randomNum.Next(min, max);
         }
-
-        public Array CreateArrayOfWords()
-        {
-            string[] words = { "hello", "cake", "tree" };
-
-            return words;
-        }
-
 
         public void WordsToLists()
         {
@@ -63,16 +46,170 @@ namespace _01_ClassLibrary
 
             List<string> treeLetters = new List<string>()
             {
-                "t",
+                "a",
+                "b",
                 "r",
-                "e",
-                "e"
+                "o",
+                "a",
+                "d"
             };
         }
-
-        private void HangmanConstructor(int numIncorrect)
+        public int numIncorrect = 0;
+        public void EvauateGuess(string wordToGuess, string guess)
         {
-            Console.WriteLine();
+            switch (wordToGuess)
+            {
+                case "cake":
+                    WordIsCake(wordToGuess);
+                    break;
+
+                case "hello":
+                    WordIsHello(wordToGuess);
+                    break;
+
+                case "abroad":
+                    WordIsAbroad(wordToGuess);
+                    break;
+
+                default: break;
+            }
+            if (wordToGuess == guess)
+            {
+                Console.Clear();
+                HangmanConstructor(numIncorrect);
+
+                Console.WriteLine("You are correct");
+            }
+            else
+            {
+                Console.Clear();
+                numIncorrect = ++numIncorrect;
+                HangmanConstructor(numIncorrect);
+
+                Console.WriteLine("You are wrong");
+            }
+        }
+
+        public void WordIsCake(string wordToGuess)
+        {
+
+        }
+
+        public void WordIsHello(string wordToGuess)
+        {
+
+        }
+
+        public void WordIsAbroad(string wordToGuess)
+        {
+
+        }
+
+        public string TakeUserGuess()
+        {
+            Console.WriteLine("Guess your letter:");
+
+            string guess = Console.ReadLine();
+
+            return guess;
+        }
+
+        public string SelectWord()
+        {
+            string[] words = { "cake", "hello", "abroad" };
+
+            Random random = new Random();
+            int value = random.Next(0, words.Length);
+
+            Console.WriteLine(words[value]);
+
+            return words[value];
+        }
+        public void HangmanConstructor(int numIncorrect)
+        {
+            if (numIncorrect == 0)
+            {
+                Console.WriteLine("                __________________ \n" +
+                    "                ||/             | \n" +
+                    "                ||\n" +
+                    "                ||\n" +
+                    "                ||\n" +
+                    "                ||\n" +
+                    "                ||\n" +
+                    "            ____||________________");
+            }
+
+            if (numIncorrect == 1)
+            {
+                Console.WriteLine("                __________________ \n" +
+                    "                ||/             | \n" +
+                    "                ||            (-_-)\n" +
+                    "                ||\n" +
+                    "                ||\n" +
+                    "                ||\n" +
+                    "                ||\n" +
+                    "            ____||________________");
+            }
+
+            if (numIncorrect == 2)
+            {
+                Console.WriteLine("                __________________ \n" +
+                    "                ||/             | \n" +
+                    "                ||            (-_-)\n" +
+                    "                ||             [|]\n" +
+                    "                ||\n" +
+                    "                ||\n" +
+                    "                ||\n" +
+                    "            ____||________________");
+            }
+
+            if (numIncorrect == 3)
+            {
+                Console.WriteLine("                __________________ \n" +
+                    "                ||/             |             \n" +
+                    "                ||            (-_-)           \n" +
+                    "                ||           --[|]             \n" +
+                    "                ||                          \n" +
+                    "                ||                             \n" +
+                    "                ||                              \n" +
+                    "            ____||________________");
+            }
+
+            if (numIncorrect == 4)
+            {
+                Console.WriteLine("                __________________ \n" +
+                    "                ||/             |     \n" +
+                    "                ||            (-_-)     \n" +
+                    "                ||           --[|]--       \n" +
+                    "                ||\n" +
+                    "                ||\n" +
+                    "                ||\n" +
+                    "            ____||________________");
+            }
+
+            if (numIncorrect == 5)
+            {
+                Console.WriteLine("                __________________ \n" +
+                    "                ||/             |       \n" +
+                    "                ||            (-_-)      \n" +
+                    "                ||           --[|]--    \n" +
+                    "                ||            _|       \n" +
+                    "                ||\n" +
+                    "                ||\n" +
+                    "            ____||________________");
+            }
+
+            if (numIncorrect == 6)
+            {
+                Console.WriteLine("                __________________ \n" +
+                    "                ||/             |     \n" +
+                    "                ||            (-_-)     \n" +
+                    "                ||           --[|]--   \n" +
+                    "                ||            _| |_    \n" +
+                    "                ||\n" +
+                    "                ||\n" +
+                    "            ____||________________");
+            }
         }
     }
 }

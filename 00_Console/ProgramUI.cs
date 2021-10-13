@@ -12,43 +12,28 @@ namespace _00_Console
         private readonly HangmanMethodRepository _repo = new HangmanMethodRepository();
         public void Run()
         {
-            
             RunGame();
         }
         //Console.Clear();
         private void RunGame()
         {
-            Console.WriteLine("Welcome, Are you redy to play: Hangman! \n" +
+            Console.WriteLine("Welcome, Are you ready to play: Hangman! \n" +
                 "           Press Enter to continue...");
 
             Console.ReadKey();
 
             Console.Clear();
 
-            SelectWord();
+            string wordToGuess = _repo.SelectWord();
 
-            if (SelectWord() == "hello")
+            int life = 0;
+
+            while(life < 6)
             {
-                Console.WriteLine("The word is hello");
+                string guess = _repo.TakeUserGuess();
+
+                _repo.EvauateGuess(wordToGuess, guess);
             }
-            else
-            {
-                Console.WriteLine("The word is not hello");
-            }
-
-            Console.ReadKey();
-        }
-
-        public string SelectWord()
-        {
-            string[] words = { "hello", "cake", "tree" };
-
-            Random random = new Random();
-            int value = random.Next(0, words.Length);
-
-            Console.WriteLine(words[value]);
-
-            return words[value];
         }
     }
 }
