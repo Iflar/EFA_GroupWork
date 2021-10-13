@@ -8,16 +8,6 @@ namespace _01_ClassLibrary
 {
     public class HangmanMethodRepository
     {
-        public void GuessWord()
-        {
-
-        }
-
-        public void ConvertWordTobool()
-        {
-
-        }
-
         private readonly Random _randomNum = new Random();
 
         public int RandomNumber(int min, int max)

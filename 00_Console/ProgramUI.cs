@@ -17,7 +17,7 @@ namespace _00_Console
         //Console.Clear();
         private void RunGame()
         {
-            Console.WriteLine("Welcome, Are you ready to play: Hangman! \n" +
+            Console.WriteLine("Welcome, Are you ready to play: HangMonn! \n" +
                 "           Press Enter to continue...");
 
             Console.ReadKey();
@@ -26,9 +26,9 @@ namespace _00_Console
 
             string wordToGuess = _repo.SelectWord();
 
-            int life = 0;
+            bool run = true;
 
-            while(life < 6)
+            while (run == true)
             {
                 string guess = _repo.TakeUserGuess();
 
